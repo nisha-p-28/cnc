@@ -1,0 +1,408 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #btn {
+        color: white;
+        background-color: #F08010;
+        padding: 10px 45px;
+        font-size: 20px;
+        border: 2px solid white;
+        border-radius: 25px;
+        margin-top: 20px;
+        transition: all 0.5s;
+    }
+
+    #btn:hover {
+        color: #F08010;
+        background-color: white;
+        border: 2px solid #F08010;
+        transform: scale(1.1);
+    }
+
+    .fixed {
+        right: 0;
+        bottom: 10px;
+        position: fixed;
+    }
+
+    /*--------------Header section start-----------*/
+
+    header {
+        padding: 10px 110px;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 6px 15px rgba(32, 33, 38, 0.985);
+    }
+
+    header h2 {
+        color: #0393D9;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        header {
+            padding: 10px 80px;
+        }
+
+        header h2 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header {
+            padding: 10px 35px;
+        }
+
+        header h2 {
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            padding: 10px 20px;
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header h2 {
+            display: none;
+        }
+    }
+
+    /*--------------Header section end-----------*/
+    /*--------------Banner section start-----------*/
+
+    #banner {
+        background: linear-gradient(to right, #091E6B, #1B50C3);
+        height: 400px;
+        width: 100%;
+        padding: 0px 110px;
+        line-height: 55px;
+    }
+
+    #banner .content {
+        float: left;
+        width: 70%;
+        padding: 50px 0px;
+    }
+
+    #banner .content h1 {
+        font-size: 46px;
+        font-family: sans-serif;
+        color: white;
+        line-height: 70px;
+        font-weight: 600;
+    }
+
+    #banner .pic {
+        float: right;
+        width: 30%;
+        height: 400px;
+    }
+
+    /* Responsive adjustments */
+    /* Medium screens (1024px and below) */
+    @media (max-width: 1024px) {
+        #banner {
+            padding: 0 60px;
+        }
+
+        #banner .content {
+            width: 70%;
+        }
+
+        #banner .content h1 {
+            font-size: 38px;
+            line-height: 60px;
+        }
+
+        #banner .pic {
+            width: 30%;
+            float: right;
+        }
+
+        #banner .pic img {
+            height: 400px;
+            width: 100%;
+            float: right;
+        }
+    }
+
+    /* Small screens (768px and below) */
+    @media (max-width: 768px) {
+        #banner {
+            padding: 0 50px;
+            height: 320px;
+        }
+
+        #banner .content {
+            width: 60%;
+        }
+
+        #banner .content h1 {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        #banner .pic {
+            width: 40%;
+        }
+
+        #banner .pic img {
+            height: 320px;
+            width: 100%;
+            float: right;
+        }
+
+        #btn {
+            font-size: 17px;
+            padding: 10px 20px;
+        }
+    }
+
+    /* Extra small screens (576px and below) */
+    @media (max-width: 576px) {
+        #banner {
+            padding: 0px 20px;
+            height: auto;
+        }
+
+        #banner .content {
+
+            float: none;
+            width: 100%;
+
+        }
+
+        #banner .content h1 {
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+
+        }
+
+        #banner .pic {
+            float: none;
+            width: 100%;
+            height: 320px;
+            padding: 0px 50px;
+        }
+
+        #banner #btn {
+            font-size: 15px;
+            padding: 12px 24px;
+            width: 70%;
+            text-align: center;
+            margin: 15%;
+            margin-bottom: 0%;
+        }
+    }
+
+    /*--------------Banner section end-----------*/
+
+
+    /*--------------Company section start----------*/
+
+    #company {
+        padding: 70px 110px;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    #company h2 {
+        font-weight: lighter;
+        font-size: 30px;
+    }
+
+    #company .many {
+        padding: 30px 30px 70px 30px;
+        margin: 50px 0 0 0;
+        box-shadow: 0px 0px 20px 10px rgba(228, 227, 227, 0.985);
+    }
+
+    #company .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #company .box {
+        padding: 10px 30px;
+        transition: all 0.5s;
+        margin: 5px;
+        width: calc(20% - 20px);
+        /* 5 images per row on large screens */
+        box-sizing: border-box;
+    }
+
+    #company .box img {
+        width: 70%;
+        height: 100%;
+        /* Maintain aspect ratio */
+        margin-bottom: 15px;
+        align-content: center;
+
+    }
+
+    #company .box:hover {
+        box-shadow: 0px 0px 10px 5px rgba(124, 121, 121, 0.985);
+        padding: 20px;
+        border-radius: 15px 0;
+        transform: scale(1.1);
+    }
+
+    #company .many p {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 1200px) {
+        #company {
+            padding: 60px 70px;
+        }
+
+        #company h2 {
+            font-size: 26px;
+        }
+
+        #company .many {
+            padding: 20px 20px 50px 20px;
+        }
+
+        #company .box {
+            width: calc(25% - 20px);
+            /* 4 images per row */
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        #company {
+            padding: 60px 70px;
+        }
+
+        #company h2 {
+            font-size: 26px;
+        }
+
+        #company .many {
+            padding: 20px 20px 50px 20px;
+        }
+
+        #company .many .box {
+            padding: 10px 35px;
+            width: 23%;
+        }
+
+        #company .box {
+            width: calc(25% - 20px);
+            /* 3 images per row */
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #company {
+            padding: 60px 50px;
+            text-align: center;
+            /* Ensures text alignment is centered */
+        }
+
+        #company h2 {
+            font-size: 22px;
+            display: inline-block;
+            /* Ensure it takes up only as much space as needed */
+            text-align: center;
+            /* Center the text inside h2 */
+            margin: 0 auto;
+            /* Center the h2 itself */
+        }
+
+        #company .box {
+            width: calc(50% - 20px);
+            /* 2 images per row */
+        }
+
+        #company .many .box {
+            padding: 10px 30px;
+            width: 30%;
+        }
+        #company .many .box img{
+            width: all 75px;
+        }
+        #company .many p {
+            font-size: 16px;
+            padding-top: 20px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        #company {
+            padding: 50px 20px;
+        }
+
+        #company h2 {
+            font-size: 20px;
+        }
+
+        #company .many {
+            padding: 20px 30px 50px 30px;
+        }
+
+        #company .many .box {
+            padding: 7px 35px;
+            width: 47%;
+        }
+        #company .many .box img{
+            width: 75px;
+        }
+
+        #company .box {
+            width: calc(33.3% - 33.3px);
+            /* 1 image per row */
+        }
+
+    }
+
+    /*--------------Company section end----------*/
+    /*--------------footer section start----------*/
+    footer {
+        background-color: #010d35;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        height: 60px;
+        padding: 10px;
+    }
+
+    footer h2 {
+        font-weight: 600;
+        font-family: sans-serif;
+        text-transform: capitalize;
+    }
+    @media screen and (max-width: 768px){
+        footer{
+            font-size: 17px;
+            padding: auto;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        footer{
+        font-size: 15px;
+        padding: 20px;
+    }
+    }
+    /*--------------footer section end----------*/
